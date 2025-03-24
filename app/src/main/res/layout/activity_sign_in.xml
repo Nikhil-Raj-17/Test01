@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/veg1"
+    tools:context=".Sign_in">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to our"
+        android:textSize="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-Grocery"
+        android:textSize="45dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:textStyle="bold"
+        android:textColor="#56AE53"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signin"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Continue with email or phone"
+        android:layout_marginTop="580dp"
+        android:layout_marginLeft="65dp"
+        android:textSize="18dp"
+        android:background="@drawable/button"
+        android:textColor="@android:color/white"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Signup"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="640dp"
+        android:background="@drawable/button"
+        android:text="Create an Account"
+        android:textSize="18dp"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>
