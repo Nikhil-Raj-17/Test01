@@ -13,40 +13,38 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Singing_up extends AppCompatActivity {
+public class signing_in extends AppCompatActivity {
 
-    private EditText nameInput;
-    private EditText phoneInput;
+    private EditText phoneNumberInput;
     private EditText passwordInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_singing_up);
+        setContentView(R.layout.activity_signing_in);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        nameInput = findViewById(R.id.name_input);
-        phoneInput = findViewById(R.id.phone_input);
+        phoneNumberInput = findViewById(R.id.phone_number_input);
         passwordInput = findViewById(R.id.password_input);
-
-        Button loginButton = findViewById(R.id.signup_button);
+        Button loginButton = findViewById(R.id.login);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = nameInput.getText().toString().trim();
-                String phone = phoneInput.getText().toString().trim();
+                String phoneNumber = phoneNumberInput.getText().toString().trim();
                 String password = passwordInput.getText().toString().trim();
 
-                if (name.isEmpty() || phone.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(Singing_up.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                if (phoneNumber.isEmpty() || password.isEmpty()) {
+
+                    Toast.makeText(signing_in.this, "Please enter phone number and password", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(Singing_up.this, opening1.class);
+
+                    Intent intent = new Intent(signing_in.this, opening1.class);
                     startActivity(intent);
                 }
             }
